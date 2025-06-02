@@ -8,9 +8,7 @@ The core experience involves a "Yes" button leading to a happy, confetti-filled 
 
 ---
 
-*Want to see it in action? Check out the live demo below!* 👇
-
-*(Suggestion: Consider adding a screenshot or a short GIF of your project here to give visitors an immediate visual!)*
+*Curious to see it in action? Jump to the [🚀 Live Demo](#-live-demo) section below!* 👇
 
 ---
 
@@ -24,14 +22,18 @@ The core experience involves a "Yes" button leading to a happy, confetti-filled 
 * **🎨 Vibrant & Playful UI:**
     * Features a warm, gradient background and a modern, friendly look using the "Nunito" Google Font.
     * Buttons and elements are styled with rounded corners, pleasing colors, and smooth hover effects.
+* **🔊 Interactive Sounds:** Engaging sound effects accompany button clicks, text changes, and movements, further enhancing the experience. Background music (with user controls) sets the mood.
 * **📱 Responsive Design:** The layout adapts seamlessly to different screen sizes, ensuring a great experience on desktops, tablets, and mobile phones.
 * **🚫 No-Select Text:** Key interactive elements have text selection disabled for a cleaner, more app-like feel during interaction.
-* **✨ Dynamic Content Display:** Elements are shown, hidden, and updated smoothly to create an engaging and flowing user experience.
 
 ## 🚀 Live Demo
 
-You can check out the live demo here:
-[**View Live Demo**](https://basem3sam.github.io/elusive-love-button/)
+Experience the fun yourself! This project is live at:
+
+* **Netlify:** [elusivelovebutton.netlify.app](https://elusivelovebutton.netlify.app/)
+* **GitHub Pages:** [basem3sam.github.io/elusive-love-button](https://basem3sam.github.io/elusive-love-button/)
+
+*(Choose your preferred link to play!)*
 
 ## 🛠️ How to View Locally
 
@@ -51,11 +53,14 @@ To run this project on your local machine:
 ## 💻 Technologies Used
 
 * **HTML5:** For the basic structure and content.
-* **CSS3:** For styling, layout (including Flexbox), animations, the vibrant theme, and responsive design.
-* **JavaScript (ES6+):** For the core interactivity, event handling, dynamic behavior, and click-counting logic.
+* **CSS3:** For styling, layout (Flexbox), animations, the vibrant theme, and responsive design.
+    * _(Includes `style.css` and potentially `loading-icon.css`)_
+* **JavaScript (ES6+):** For core interactivity, event handling, dynamic behavior, and click-counting logic.
 * **jQuery:** Used for DOM manipulation and event handling simplification.
 * **[canvas-confetti](https://github.com/catdad/canvas-confetti):** A lightweight library for the fun confetti celebration effect.
 * **Google Fonts (Nunito):** For clean and playful typography.
+* **Audio Files:** Various sound effects and background music to enhance immersion.
+* **Deployment:** GitHub Pages, Netlify.
 
 ## 💡 Future Ideas
 
