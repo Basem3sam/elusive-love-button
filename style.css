@@ -1,67 +1,86 @@
+/* style.css */
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Nunito', sans-serif; /* Using Nunito */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f0f2f5;
-  color: #333;
+  /* Vibrant gradient background */
+  background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Peachy-pink gradient */
+  color: #4A4A4A; /* Dark grey for good readability */
   text-align: center;
-  overflow: hidden;
+  overflow: hidden; /* Keep this to prevent scrollbars from elusive button */
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.92); /* Slightly semi-transparent white */
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Softer, rounder corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, more spread shadow */
   width: 90%;
   max-width: 500px;
   transition: transform 0.3s ease-in-out;
 }
 
 h1 {
-  color: #e91e63;
-  margin-bottom: 30px;
-  font-size: 2em;
+  color: #E94560; /* Vibrant pink/red */
+  margin-bottom: 35px;
+  font-size: 2.3em;
+  font-weight: 800; /* Extra-bold Nunito */
   text-transform: capitalize;
+  line-height: 1.3;
 }
 
 .buttons {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px; /* Slightly increased gap */
 }
 
 button {
-  padding: 12px 25px;
-  font-size: 1em;
+  padding: 15px 30px; /* Larger buttons */
+  font-size: 1.1em;
+  font-weight: 700; /* Bold Nunito */
   border: none;
-  border-radius: 8px;
+  border-radius: 25px; /* Rounder buttons */
   cursor: pointer;
-  transition: border-color 0.3 ease,
-              transform 0.2 ease;
   color: white;
-  font-weight: bold;
   text-transform: capitalize;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Combined transitions */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-in-out, top 0.2s ease-out, left 0.2s ease-out;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05); /* More playful hover */
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
 }
 
 #yes-button {
-  background-color: #4CAF50;
+  background-color: #28A745; /* A friendly green */
 }
 #yes-button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
+  background-color: #218838; /* Darker green on hover */
+  /* General button hover effects will also apply */
 }
+
 #no-button {
-  background-color: #f44336;
-  transition: top 0.2s ease-out, left 0.2s ease-out;
+  background-color: #FF6B6B; /* A playful, soft red */
 }
 #no-button:hover {
-  background-color: #e53935;
-  transform: translateY(-2px);
+  background-color: #E75C5C; /* Darker soft red on hover */
+  /* General button hover effects will also apply unless it moves */
+}
+#back-button {
+  background-color: #6c757d; /* A neutral, friendly grey */
+  color: white;              /* Ensures text is white like other buttons */
+  margin-top: 30px;
+}
+#back-button:hover {
+  background-color: #5a6268; /* A darker grey for hover */
 }
 
 .hidden {
@@ -76,34 +95,57 @@ button {
 }
 
 #loading-icon {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #555;
+  margin-top: 25px;
+  font-size: 1.3em;
+  font-weight: 700; /* Bold Nunito */
+  color: #4A4A4A;
+}
+
+#loading-icon img {
+  /* If your loading GIF has a non-transparent background clashing with the white container: */
+  /* mix-blend-mode: screen; */ /* Try this if GIF bg is dark/colored and spinner is light */
+  /* Or better: find a loading GIF with a transparent background */
+  margin-bottom: 10px; /* Space between GIF and "Loading..." text */
+}
+
+#loading-icon p {
+    margin-top: 10px; /* Space above "Loading..." if GIF is also present */
 }
 
 #result-gif {
   margin-top: 20px;
   display: flex;
+  flex-direction: column; /* To stack image and potential text */
   justify-content: center;
   align-items: center;
 }
 
 #result-gif img {
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Consistent with container rounding */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Media Query (kept your existing structure, minor adjustments if needed) */
 @media (max-width: 480px) {
   .container {
     padding: 25px;
+    margin: 20px; /* Add some margin on small screens */
+    width: calc(100% - 40px); /* Ensure padding is respected */
   }
+
   h1 {
-    font-size: 1.6em;
+    font-size: 1.8em; /* Adjusted for new base font size */
   }
+
   .buttons {
     flex-direction: column;
     gap: 15px;
+  }
+
+  button {
+    width: 100%; /* Full width buttons in column layout */
+    padding: 12px 20px; /* Slightly adjust padding for smaller buttons */
+    font-size: 1em;
   }
 }
