@@ -111,11 +111,17 @@ $(function() {
       yesCelebrationSound.pause();
       yesCelebrationSound.currentTime = 0;
     }
-    if (backgroundMusic && musicSuccessfullyStarted) {
-      backgroundMusic.pause();
-      musicSuccessfullyStarted = false;
-      updateMusicButtonText();
-    }
+    
+    // For backgroundMusic, we will NO LONGER pause it here. idk i feel like that :>
+    // It will continue to play if it was already playing.
+    // The user can use the musicToggleButton to control it.
+
+    // =============== older code ===============
+    // if (backgroundMusic && musicSuccessfullyStarted) {
+    //   backgroundMusic.pause();
+    //   musicSuccessfullyStarted = false;
+    //   updateMusicButtonText();
+    // }
 
     $("#result-gif").addClass("hidden")
     $(".container > img").first().removeClass("hidden");
