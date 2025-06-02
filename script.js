@@ -7,8 +7,26 @@ $(function() {
     $("#loading-icon").removeClass("hidden");
     const loading = setTimeout(() => {
       $("#loading-icon").addClass("hidden");
-      $("#result-gif").removeClass("hidden")
-    }, 5000);
+      $("#result-gif").removeClass("hidden");
+      // ✨🎉 Trigger Confetti Here! 🎉✨
+
+      function shootConfetti() {
+          confetti({
+          particleCount: 70,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0, y: 0.8 } // Left side
+        });
+        confetti({
+          particleCount: 70,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1, y: 0.8 } // Right side
+        });
+      }
+      shootConfetti();
+      setTimeout(shootConfetti, 200); // Another burst slightly later
+    }, 6000);
   });
 
   let noButtonCount = 0;
