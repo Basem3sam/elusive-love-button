@@ -96,6 +96,7 @@ This project has plenty of room to grow! Some ideas include:
 
 * **Basem Esam**
 * GitHub: [@basem3sam](https://github.com/basem3sam)
+* LinkedIn: [@Basem Esam](https://linkedin.com/in/basemesam)
 * Connect with me for more fun projects!
 
 ---
